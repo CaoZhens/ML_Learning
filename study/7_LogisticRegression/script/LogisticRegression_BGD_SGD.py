@@ -1,7 +1,7 @@
 # coding: utf-8
 '''
 Created  on Oct 10, 2017
-Modified on Oct 11, 2017
+Modified on Oct 11, 2017d
 @author:
     CaoZhen
 @description:
@@ -9,6 +9,7 @@ Modified on Oct 11, 2017
 @reference:
     1. machinelearninginaction Ch05
 '''
+
 import numpy as np
 import matplotlib as mpl
 mpl.use('TkAgg')
@@ -30,15 +31,15 @@ import urllib2
 Load DataSet(2 targets)
 
 '''
-def loadDataSet():
-    xArr = []
-    yArr = []
-    with open('/Users/fanghan/mlproject/ML_Learning/datasets/testSet.txt') as f:
+def loadDataSet(filename):
+    x = []
+    y = []
+    with open(filename) as f:
         for line in f.readlines():
             lineArr = line.strip().split()
-            xArr.append([1.0, float(lineArr[0]), float(lineArr[1])])
-            yArr.append(int(lineArr[2]))
-    return np.array(xArr), np.array(yArr)
+            x.append([1.0, float(lineArr[0]), float(lineArr[1])])
+            y.append(int(lineArr[2]))
+    return np.array(x), np.array(y)
 
 '''
 Load Iris(3 targets)
@@ -81,7 +82,7 @@ Batch Gradient Descent
 '''
 def batchGD(X, y, alpha, maxCycles):
     m, n = np.shape(X)
-    theta = np.zeros((n,1))
+    theta = np.ones((n,1))
     history_error = []
     history_theta = []
     for k in range(maxCycles):
@@ -106,7 +107,7 @@ Stochastic Gradient Descent
 '''
 def stoGD(X, y, alpha, maxLoops):
     m, n = np.shape(X)
-    theta = np.zeros((n,1))
+    theta = np.ones((n,1))
     history_error = []
     history_theta = []
     count = 0
@@ -122,22 +123,23 @@ def stoGD(X, y, alpha, maxLoops):
 
 
 # with animation
-X, y = loadDataSet()
-Xmat = np.mat(X)
-ymat = np.mat(y).T
+xArr, yArr = loadDataSet('/Users/fanghan/mlproject/ML_Learning/datasets/testSet.txt')
+xMat = np.mat(xArr)
+yMat = np.mat(yArr).T
 
-theta, errors, thetas = batchGD(Xmat, ymat, 0.1, 10000)
-theta2, errors2, thetas2 = stoGD(Xmat, ymat, 0.1, 100)
-print np.shape(Xmat)
+theta, errors, thetas = batchGD(xMat, yMat, 0.1, 1000)
+theta2, errors2, thetas2 = stoGD(xMat, yMat, 0.1, 10)
+print np.shape(xMat)
 print len(thetas)
 print len(thetas2)
+# print errors
 # lstheta = leastSquareMethod(X, y)
 
 # fitting Curve png
 fC_2methods_png_fig = plt.figure()
 ax = fC_2methods_png_fig.add_subplot(111)
 # Plot also the training points
-ax.scatter(X[:, 1], X[:, 2], c=y, edgecolors='k', cmap=mpl.colors.ListedColormap(['r', 'g', 'b']))
+ax.scatter(xArr[:, 1], xArr[:, 2], c=yArr, edgecolors='k', cmap=mpl.colors.ListedColormap(['r', 'g', 'b']))
 x = np.arange(-4.0, 4.0, 0.1)
 # y_bgd = theta[0][0] + theta[1][0] * x
 # y_sgd = theta2[0][0] + theta2[1][0] * x
@@ -154,60 +156,59 @@ fC_2methods_png_fig.savefig("/Users/fanghan/Desktop/LogisticR_2methods_FittingCu
 plt.close(fC_2methods_png_fig)
 
 
-# # fitting Curve gif
-# # bgd & sgd
-# fC_gd_gif_fig = plt.figure()
-# ax = fC_gd_gif_fig.add_subplot(111)
-# line1, = ax.plot([], [], 'r', lw=2.0, label='Batch Gradient Descent')
-# line2, = ax.plot([], [], 'g', lw=2.0, label='Stochastic Gradient Descent')
-# ax.legend()
-# plt.title('Logistic Regression solved by Gradient Descent')
-# plt.grid(True)
+# fitting Curve gif
+# bgd & sgd
+fC_gd_gif_fig = plt.figure()
+ax = fC_gd_gif_fig.add_subplot(111)
+line1, = ax.plot([], [], 'r', lw=2.0, label='Batch Gradient Descent')
+line2, = ax.plot([], [], 'g', lw=2.0, label='Stochastic Gradient Descent')
+ax.legend()
+plt.title('Logistic Regression solved by Gradient Descent')
+plt.grid(True)
 
-# def drawLine1(theta):
-#     x = np.arange(-4.0, 4.0, 0.1)
-#     # y = theta[0][0] + theta[1][0] * x
-#     y = -(theta[0][0] + theta[1][0] * x) / theta[2][0]
-#     line1.set_data(x,y)
-#     return line1,
+def drawLine1(theta):
+    x = np.arange(-4.0, 4.0, 0.1)
+    # y = theta[0][0] + theta[1][0] * x
+    y = -(theta[0][0] + theta[1][0] * x) / theta[2][0]
+    line1.set_data(x,y)
+    return line1,
 
-# def drawLine2(theta):
-#     x = np.arange(-4.0, 4.0, 0.1)
-#     # y = theta[0][0] + theta[1][0] * x
-#     y = -(theta[0][0] + theta[1][0] * x) / theta[2][0]
-#     line2.set_data(x,y)
-#     return line2,
+def drawLine2(theta):
+    x = np.arange(-4.0, 4.0, 0.1)
+    # y = theta[0][0] + theta[1][0] * x
+    y = -(theta[0][0] + theta[1][0] * x) / theta[2][0]
+    line2.set_data(x,y)
+    return line2,
 
-# def init():
-#     m, n = np.shape(X)
-#     ax = fC_gd_gif_fig.add_subplot(111)
-#     # ax.scatter(X[:,1], y, s=30, c='b', alpha=0.5)
-#     ax.scatter(X[:, 1], X[:, 2], c=y, edgecolors='k', cmap=mpl.colors.ListedColormap(['r', 'g', 'b']))
-#     drawLine1(np.zeros((n,1)))
-#     drawLine2(np.zeros((n,1)))
-#     return
+def init():
+    m, n = np.shape(xMat)
+    ax = fC_gd_gif_fig.add_subplot(111)
+    # ax.scatter(X[:,1], y, s=30, c='b', alpha=0.5)
+    ax.scatter(xArr[:, 1], xArr[:, 2], c=yArr, edgecolors='k', cmap=mpl.colors.ListedColormap(['r', 'g', 'b']))
+    drawLine1(np.ones((n,1)))
+    drawLine2(np.ones((n,1)))
+    return
 
-# def animate(i):
-#     drawLine1(thetas[i])
-#     drawLine2(thetas2[i])
-#     return
+def animate(i):
+    drawLine1(thetas[i])
+    drawLine2(thetas2[i])
+    return
 
-# anim = animation.FuncAnimation(fC_gd_gif_fig, animate, init_func=init,
-#                                 frames=len(thetas),
-#                                 interval=20,
-#                                 repeat=True,
-#                                 blit=False
-#                                 )
+anim = animation.FuncAnimation(fC_gd_gif_fig, animate, init_func=init,
+                                frames=len(thetas),
+                                interval=20,
+                                repeat=True,
+                                blit=False
+                                )
 
-# # plt.show()
-# # # myWritter = animation.FFMpegWriter()
-# # # anim.save('/Users/fanghan/Desktop/LinearR_1_BatchGradDescent.mp4', writer=myWritter)
-# anim.save('/Users/fanghan/Desktop/LinearR_GD_FittingCurve.gif', writer='imagemagick', fps=50)
-# plt.close(fC_gd_gif_fig)
+# plt.show()
+anim.save('/Users/fanghan/Desktop/LogisticR_GD_FittingCurve.gif', writer='imagemagick', fps=50)
+plt.close(fC_gd_gif_fig)
 
 
 # 绘制lossfunc曲线 
 # 实际上是似然函数的导数
+# ? 为什么一开始的几个数是负值？
 lfC_gd_png_fig = plt.figure(figsize=(8,18))
 ax1 = lfC_gd_png_fig.add_subplot(211)
 ax1.yaxis.set_major_formatter(mtick.FormatStrFormatter('%.4f'))
@@ -222,7 +223,7 @@ ax2.set_xlabel('Number of iterations')
 ax2.set_ylabel('J')
 ax2.grid(True)
 plt.legend()
-plt.title('Loss Function')
+# plt.title('Loss Function')
 plt.show()
 # lfC_gd_png_fig.savefig("/Users/fanghan/Desktop/LinearR_GD_LossFunc.png")
 # plt.close(lfC_gd_png_fig)
