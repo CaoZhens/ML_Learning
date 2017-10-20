@@ -1,5 +1,5 @@
 # 线性回归（1）模型建立
-
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 ## 基于单样本的建模
 
 已知单样本 $\{\mathbf{x}^i, \mathbf{y}^i\}$（n个特征）
