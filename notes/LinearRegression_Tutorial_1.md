@@ -1,13 +1,13 @@
 # 线性回归（1）模型建立
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 ## 基于单样本的建模
 
 已知单样本 $\{\mathbf{x}^i, \mathbf{y}^i\}$（n个特征）
 线性回归模型为 $$h_\theta(\mathbf{x}^i) = \mathbf{\theta}^T \mathbf{x}^i = \theta_{0}x_{0}+\theta_{1}x_{1}+\cdots+\theta_{n}x_{n} = \hat{\mathbf{y}^i}$$
 
-## 基于多样本的建模
+## 基于多样本的建模
 
-将上述向量表示推广至矩阵，样本矩阵可表示为：
+将上述向量表示推广至矩阵，样本矩阵可表示为：
 $$\mathbf{X} = \left[
     \begin{matrix}
       \cdots & {\mathbf{x}^1}^T & \cdots \\  
