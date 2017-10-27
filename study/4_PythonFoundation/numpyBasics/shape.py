@@ -11,10 +11,18 @@ Created on Oct 17, 2017
 '''
 
 import numpy as np
+a1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print a1
+print np.shape(a1)
+try:
+    print a1.shape
+except Exception, e:
+    print Exception, ':', e
 
 a1Arr = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 print a1Arr
 print np.shape(a1Arr)
+print a1Arr.shape
 
 a1Arr_2 = a1Arr[:, np.newaxis]
 print a1Arr_2
