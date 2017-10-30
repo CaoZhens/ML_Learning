@@ -1,39 +1,42 @@
 # coding: utf-8
 '''
-Created on Oct 19, 2017
+Created  on Oct 19, 2017
+Modified on Oct 30, 2017
 @author:
     CaoZhen
 @description:
-    Decision Tree Source Code
+    Decision Tree Source Code with ID3 algorithm
 @reference:
     1. machinelearninginaction Ch03
 '''
 
 from math import log
 import operator
+import copy
 
 '''
 Create Simple DataSet
 '''
-def createDataSet():
+def createSimpleDataSet():
     dataSet = [[1, 1, 'yes'],
                [1, 1, 'yes'],
                [1, 0, 'no'],
                [0, 1, 'no'],
                [0, 1, 'no']]
-    labels = ['no surfacing','flippers'] # feature's label
-    #change to discrete values
+    # feature's label
+    labels = ['no surfacing','flippers']
+    # change to discrete values
     return dataSet, labels
 
 '''
-Calc Shannon Entropy of the Whole Data's Label
+Calc Shannon Entropy of the DataSet's Label
 '''
 def calcShannonEnt(dataSet):
     numEntries = len(dataSet)
     labelCounts = {}
     for featVec in dataSet: #the the number of unique elements and their occurance
         currentLabel = featVec[-1]
-        if currentLabel not in labelCounts.keys(): 
+        if currentLabel not in labelCounts.keys():
             labelCounts[currentLabel] = 0
         labelCounts[currentLabel] += 1
     # print labelCounts
@@ -56,6 +59,7 @@ def splitDataSet(dataSet, feaNum, value):
     return retDataSet
     
 '''
+Calc I(Y,Xn) & Choose the best feature split
 '''
 def chooseBestFeatureToSplit(dataSet):
     numFeatures = len(dataSet[0]) - 1      # the last column is used for the labels
@@ -77,42 +81,51 @@ def chooseBestFeatureToSplit(dataSet):
     return bestFeature
 
 '''
+Vote to the maximum value of yLabel
 '''
-def majorityCnt(classList):
-    classCount = {}
-    for vote in classList:
-        if vote not in classCount.keys():
-            classCount[vote] = 0
-        classCount[vote] += 1
-    sortedClassCount = sorted(classCount.iteritems(), key=operator.itemgetter(1), reverse=True)
-    return sortedClassCount[0][0]
+def majorityCnt(yList):
+    valueCount = {}
+    for y in yList:
+        if y not in valueCount.keys():
+            valueCount[y] = 0
+        valueCount[y] += 1
+    sortedValueCount = sorted(valueCount.iteritems(), key=operator.itemgetter(1), reverse=True)
+    return sortedValueCount[0][0]
 
+'''
+Decision Tree Generation
+'''
 def createTree(dataSet, labels):
-    classList = [example[-1] for example in dataSet]
-    if classList.count(classList[0]) == len(classList):
-        return classList[0]  # stop splitting when all of the classes are equal
-    if len(dataSet[0]) == 1: # stop splitting when there are no more features in dataSet
-        return majorityCnt(classList)
-    bestFeat = chooseBestFeatureToSplit(dataSet)
-    bestFeatLabel = labels[bestFeat]
+    yList = [line[-1] for line in dataSet]
+    if yList.count(yList[0]) == len(yList):
+        return yList[0]            # stop splitting when all of the classes are equal
+    if len(dataSet[0]) == 1:       # stop splitting when there are no more features in dataSet
+        return majorityCnt(yList)
+    featLabels = copy.copy(labels) # deep copy
+    bestFeatNum = chooseBestFeatureToSplit(dataSet)
+    bestFeatLabel = featLabels[bestFeatNum]
     myTree = {bestFeatLabel : {}}
-    del(labels[bestFeat])
-    featValues = [example[bestFeat] for example in dataSet]
+    del(featLabels[bestFeatNum])
+    featValues = [line[bestFeatNum] for line in dataSet]
     uniqueVals = set(featValues)
     for value in uniqueVals:
-        subLabels = labels[:]       #copy all of labels, so trees don't mess up existing labels
-        myTree[bestFeatLabel][value] = createTree(splitDataSet(dataSet, bestFeat, value),subLabels)
+        subLabels = featLabels[:]  # copy all of labels, so trees don't mess up existing labels
+        myTree[bestFeatLabel][value] = createTree(splitDataSet(dataSet, bestFeatNum, value),subLabels)
     return myTree
-    
-def classify(inputTree,featLabels,testVec):
+
+'''
+Using DT to Classify TestSet
+'''
+def classify(inputTree, featLabels, testVec):
     firstStr = inputTree.keys()[0]
     secondDict = inputTree[firstStr]
     featIndex = featLabels.index(firstStr)
     key = testVec[featIndex]
     valueOfFeat = secondDict[key]
-    if isinstance(valueOfFeat, dict): 
+    if isinstance(valueOfFeat, dict):
         classLabel = classify(valueOfFeat, featLabels, testVec)
-    else: classLabel = valueOfFeat
+    else: 
+        classLabel = valueOfFeat
     return classLabel
 
 def storeTree(inputTree,filename):
@@ -120,12 +133,15 @@ def storeTree(inputTree,filename):
     fw = open(filename,'w')
     pickle.dump(inputTree,fw)
     fw.close()
-    
+  
 def grabTree(filename):
     import pickle
     fr = open(filename)
     return pickle.load(fr)
-    
+
 if __name__ == '__main__':
-    data, label = createDataSet()
-    print createTree(data, label)
+    data, label = createSimpleDataSet()
+    trainTree = createTree(data, label)
+    print trainTree
+    print label
+    print classify(trainTree, label, [1, 0])
