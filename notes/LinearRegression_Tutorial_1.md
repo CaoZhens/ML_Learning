@@ -2,10 +2,12 @@
 
 ## 基于单样本的建模
 
-已知单样本 $\{\mathbf{x}^i, \mathbf{y}^i\}$（n个特征）
-线性回归模型为 $$h_\theta(\mathbf{x}^i) = \mathbf{\theta}^T \mathbf{x}^i = \theta_{0}x_{0}+\theta_{1}x_{1}+\cdots+\theta_{n}x_{n} = \hat{\mathbf{y}^i}$$
+已知单个样本 $\{\mathbf{x}, y\}$，记特征个数为$n$，即：$$\mathbf{x} = (x_{0}, x_{1}, ... , x_{n})$$
+线性回归模型为 $$h_\theta(\mathbf{x}) = \mathbf{\theta}^T \mathbf{x} = \theta_{0}x_{0}+\theta_{1}x_{1}+\cdots+\theta_{n}x_{n} = \hat{y}$$
 
 ## 基于多样本的建模
+
+将样本个数从一个推广至$m$个，其中第$i$个样本记为$\{\mathbf{x}^i, y^i\}$
 
 将上述向量表示推广至矩阵，样本矩阵可表示为：
 $$\mathbf{X} = \left[
@@ -15,13 +17,13 @@ $$\mathbf{X} = \left[
        & \vdots &                        \\
       \cdots & {\mathbf{x}^m}^T & \cdots
     \end{matrix}
-  \right] , 
+  \right],
   \mathbf{y} = \left[
     \begin{matrix}
-      \mathbf{y}^1 \\
-      \mathbf{y}^2 \\
+      y^1 \\
+      y^2 \\
       \vdots       \\
-      \mathbf{y}^m
+      y^m
     \end{matrix}  
   \right]$$
 
