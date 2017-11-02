@@ -36,17 +36,21 @@
 
 批梯度下降与随机梯度下降
 
-![image](https://github.com/CaoZhens/ML_Learning/blob/master/study/6_LinearRegression/pic/LinearR_3methods_FittingCurve.png)
-
 ![image](https://github.com/CaoZhens/ML_Learning/blob/master/study/6_LinearRegression/pic/LinearR_GD_FittingCurve.gif) 
 
 ### 三、 Logistic回归与SoftMax回归
+
+#### 模型篇
 
 Logistic Regression - 二分类器
 
 SoftMax Regression - 多分类器
 
 逻辑回归与最大熵模型
+
+#### 算法篇
+
+![image](https://github.com/CaoZhens/ML_Learning/blob/master/study/7_LogisticRegression/pic/LogisticR_GD_FittingCurve.gif) 
 
 ### 四、 决策树
 
