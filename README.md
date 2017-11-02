@@ -4,7 +4,8 @@
 
 ## 访问之前
 
-**关于笔记浏览**
+**如何浏览笔记**
+
 由于笔记中包含大量LaTeX公式，而GitHub Flavored Markdown（GFM）不支持LaTex，因此直接浏览会看到大量乱码
 建议使用**Chrome浏览器**并安装扩展**GitHub with MathJax**，可以解决80%以上的乱码问题，其余乱码将随项目完善，逐渐进行解决
 
@@ -35,9 +36,9 @@
 
 批梯度下降与随机梯度下降
 
-![](.study/6_LinearRegression/pic/LinearR_3methods_FittingCurve.png)
+![image](https://github.com/CaoZhens/ML_Learning/blob/master/study/6_LinearRegression/pic/LinearR_3methods_FittingCurve.png)
 
-![](.study/6_LinearRegression/pic/LinearR_GD_FittingCurve.gif)
+![image](https://github.com/CaoZhens/ML_Learning/blob/master/study/6_LinearRegression/pic/LinearR_GD_FittingCurve.gif) 
 
 ### 三、 Logistic回归与SoftMax回归
 
@@ -51,7 +52,7 @@ SoftMax Regression - 多分类器
 
 ID3 / C4.5
 
-CART
+CART
 
 Pruning
 
@@ -63,3 +64,4 @@ Boosting
 
 ### 六、 SVM
 
+... ...
