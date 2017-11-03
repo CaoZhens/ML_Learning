@@ -1,11 +1,36 @@
-# 线性回归（2）模型求解——最小二乘法与梯度下降法
+# 线性回归（2）模型求解:最小二乘法与梯度下降法
 
-## 
+## 基于MSE准则求解
 
+定义误差函数(Loss Function)： 
+$$
+J_m(\theta) = \frac{1}{2}\sum_{i=1}^{m}(\hat{y}^i - y^i)^2 = \frac{1}{2}\sum_{i=1}^{m}(\theta^T \mathbf{x}^i - y^i)^2
+$$
 
+基于最小均方误差准则（MLSE)求解模型参数：
+$$
+\theta = argmin_{\theta}J_m(\theta)
+$$
 
-  定义误差函数(Loss Function)为 $$J_m(\theta) = \frac{1}{2}\sum_{i=1}^{m}(\hat{\mathbf{y}}^i - \mathbf{y}^i)^2 = \frac{1}{2}\sum_{i=1}^{m}(\theta^T \mathbf{x} - \mathbf{y}^i)^2$$
-基于最小均方误差准则（MLSE)，模型参数为$$\theta = argmin_{\theta}J_m(\theta)$$
+## 直接求解析解：最小二乘法
 
-即 $\mathbf{X}_{{m}\times{n}}$， $\mathbf{y}_{{m}\times{1}}$
-线性回归模型为 $$h_\theta(\mathbf{X}) = \mathbf{X}_{{m}\times{n}} \mathbf{\theta}_{{n}\times{1}} = \hat{\mathbf{y}}_{{m}\times{1}}$$
+将样本表示为矩阵，即 $\mathbf{X}_{{m}\times{n}}$， $\mathbf{y}_{{m}\times{1}}$
+
+将参数表示为矩阵，即 $\theta_{{n}\times{1}}$
+
+误差函数记为
+$$
+J_m(\theta) = \frac{1}{2}\sum_{i=1}^{m}(\theta^T \mathbf{x}^i - y^i)^2 = \frac12 \left( \theta\mathbf{X} - \mathbf{y}\right)^T\left( \theta\mathbf{X} - \mathbf{y}\right) = J(\theta)
+$$
+
+求误差函数的最小值，等价于令误差函数的偏导为0，即：
+$$
+\nabla_\theta{J(\theta)} = ... = \mathbf{X}^T\mathbf{X}\theta - \mathbf{X}^T\mathbf{y}  \to 0
+$$
+
+当$\mathbf{X}^T\mathbf{X}$可逆时
+$$
+\theta = \left( \mathbf{X}^T\mathbf{X} \right)^{-1}\left( \mathbf{X}^T\mathbf{y}\right)
+$$
+
+## 梯度下降法求解
