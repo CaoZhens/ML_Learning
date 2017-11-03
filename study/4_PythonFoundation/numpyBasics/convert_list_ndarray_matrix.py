@@ -51,6 +51,9 @@ print aArr2.reshape(-1)
 print aArr2.flatten()
 print aArr2.ravel()
 
-# directly
-print '==========6. matrix - col to row=========='
+# 6. matrix - col to row directly
+print '==========6. matrix - col to row directly=========='
 print aMat2.A1
+
+# Conclusion
+# mat have tolist() , don't have toarray(), use np.asarray() or np.array()
