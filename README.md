@@ -15,7 +15,15 @@
 
 ####  Package篇
 
-[1 - Numpy Basics](./study/4_PythonFoundation/numpyBasics/)
+1 - Numpy Basics 
+
+&emsp;[1.1 list / ndarray / matrix的相互转换](./study/4_PythonFoundation/numpyBasics/convert_list_ndarray_matrix.py)
+
+&emsp;1.2 Key Functions
+
+&emsp;&emsp;[1.2.1 shape](./study/4_PythonFoundation/numpyBasics/shape.py)
+
+&emsp;&emsp;[1.2.2 slices](./study/4_PythonFoundation/numpyBasics/slices.py)
 
 [2 - Scipy Basics](./study/4_PythonFoundation/scipyBasics/)
 
@@ -45,7 +53,11 @@
 
 [线性回归[1] - 模型建立](./notes/LinearRegression_Tutorial_1.md)
 
-[线性回归[2] - 利用最小二乘法与梯度下降法求解模型](./notes/LinearRegression_Tutorial_2.md)
+[线性回归[2] - 模型求解：最小二乘法与梯度下降法](./notes/LinearRegression_Tutorial_2.md)
+
+[线性回归[3] - 最大似然估计与线性回归模型的先验假设](./notes/LinearRegression_Tutorial_3.md)
+
+线性回归[4] - 最大似然估计与最小二乘法的等价性
 
 线性回归的扩展[1] - 对特征做扩展 - 多项式回归Polynomial Regression
 
