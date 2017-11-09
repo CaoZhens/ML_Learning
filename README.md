@@ -43,7 +43,7 @@
 
 [线性回归[3] - 最大似然估计与线性回归模型的先验假设](./notes/LinearRegression_Tutorial_3.md)
 
-线性回归[4] - 最大似然估计与最小二乘法的等价性
+[线性回归[4] - 最大似然估计与最小二乘法的等价性](./notes/LinearRegression_Tutorial_4.md)
 
 线性回归的扩展[1] - 对特征做扩展 - 多项式回归Polynomial Regression
 
