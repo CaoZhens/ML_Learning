@@ -19,7 +19,19 @@
 
 [机器学习的数学基础[2] - Gamma函数](./notes/1_Mathematical_Tutorial_2.md)
 
-[机器学习的数学基础[3] - Taylor公式及其应用](./notes/1_Mathematical_Tutorial_3.md)
+机器学习的数学基础[3] - 微积分在运算中的应用 
+
+[机器学习的数学基础[4] - Taylor公式及其应用](./notes/1_Mathematical_Tutorial_3.md)
+
+概率论的应用[1] - 生日悖论
+
+概率论的应用[2] - 组合数与信息熵
+
+概率论的应用[3] - taylor公式与Gini系数&信息熵
+
+概率论的应用[4] - taylor公式与泊松分布
+
+概率论的应用[5] - 本福特定律
 
 #### 2. 线性回归／最小二乘法／梯度下降法
 
