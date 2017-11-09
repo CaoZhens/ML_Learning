@@ -17,7 +17,7 @@
 
 [机器学习的数学基础[1] - 自然底数e](./notes/1_Mathematical_Tutorial_1.md)
 
-机器学习的数学基础[2] - Gamma函数
+[机器学习的数学基础[2] - Gamma函数](./notes/1_Mathematical_Tutorial_2.md)
 
 机器学习的数学基础[3] - Taylor展式及其应用
 
@@ -73,6 +73,8 @@ SoftMax Regression - 多分类器
 Bootstrap与Bagging
 
 提升：Boosting
+
+&emsp;Adaboost
 
 对比GBDT与XGboost
 
