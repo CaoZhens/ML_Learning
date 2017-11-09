@@ -19,7 +19,7 @@
 
 [机器学习的数学基础[2] - Gamma函数](./notes/1_Mathematical_Tutorial_2.md)
 
-机器学习的数学基础[3] - Taylor展式及其应用
+[机器学习的数学基础[3] - Taylor公式及其应用](./notes/1_Mathematical_Tutorial_3.md)
 
 #### 2. 线性回归／最小二乘法／梯度下降法
 
