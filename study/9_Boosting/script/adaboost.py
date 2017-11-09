@@ -4,12 +4,15 @@ Created  on Nov 06, 2017
 @author:
     CaoZhen
 @description:
-    Adaptive Boosting 
+    Adaptive Boosting
 @reference:
     1. machinelearninginaction Ch07
 '''
 import numpy as np
 
+'''
+load Simple Data
+'''
 def loadSimpleDataSet():
     dataSet = [[ 1. ,  2.1],
                [ 2. ,  1.1],
@@ -19,18 +22,27 @@ def loadSimpleDataSet():
     classLabels = [1.0, 1.0, -1.0, -1.0, 1.0]
     return np.array(dataSet), np.array(classLabels)
 
-# def loadDataSet(fileName):      #general function to parse tab -delimited floats
-#     numFeat = len(open(fileName).readline().split('\t')) #get number of fields 
-#     dataMat = []; labelMat = []
-#     fr = open(fileName)
-#     for line in fr.readlines():
-#         lineArr =[]
-#         curLine = line.strip().split('\t')
-#         for i in range(numFeat-1):
-#             lineArr.append(float(curLine[i]))
-#         dataMat.append(lineArr)
-#         labelMat.append(float(curLine[-1]))
-#     return dataMat,labelMat
+'''
+Load DataSet
+Args:
+    fileName
+Return:
+    X - np.array (m, n)
+    y - np.array (n,  )
+'''
+def loadDataSet(fileName):
+    x = []
+    y = []
+    with open(fileName) as f:
+        numFeat = len(f.readline().split('\t')) - 1
+        for line in f.readlines():
+            lineArr =[]
+            curLine = line.strip().split('\t')
+            for i in np.arange(numFeat):
+                lineArr.append(float(curLine[i]))
+            x.append(lineArr)
+            y.append(float(curLine[-1]))
+    return np.array(x), np.array(y)
 
 '''
 Generate Stump's subFunc: Stump Classify
@@ -105,17 +117,20 @@ def adaBoostWithDS(dataMat, classLabels, numIt=40):
             break
     return weakClassArr
 
-# def adaClassify(datToClass,classifierArr):
-#     dataMatrix = mat(datToClass)#do stuff similar to last aggClassEst in adaBoostTrainDS
-#     m = shape(dataMatrix)[0]
-#     aggClassEst = mat(zeros((m,1)))
-#     for i in range(len(classifierArr)):
-#         classEst = stumpClassify(dataMatrix, classifierArr[i]['dim'],\
-#                                  classifierArr[i]['thresh'],\
-#                                  classifierArr[i]['ineq'])#call stump classify
-#         aggClassEst += classifierArr[i]['alpha']*classEst
-#         print aggClassEst
-#     return sign(aggClassEst)
+'''
+Using AdaboostWithDS Model to classify test data
+'''
+def adaClassify(testData, classifierArr):
+    testDataMat = np.mat(testData) #do stuff similar to last aggClassEst in adaBoostTrainDS
+    m = np.shape(testDataMat)[0]
+    aggClassEst = np.mat(np.zeros((m, 1)))
+    for i in np.arange(len(classifierArr)):
+        classEst = stumpClassify(testDataMat, classifierArr[i]['featNum'],\
+                                 classifierArr[i]['thresh'],\
+                                 classifierArr[i]['ineq'])#call stump classify
+        aggClassEst += classifierArr[i]['alpha'] * classEst
+        # print aggClassEst
+    return np.sign(aggClassEst)
 
 # def plotROC(predStrengths, classLabels):
 #     import matplotlib.pyplot as plt
@@ -145,10 +160,27 @@ def adaBoostWithDS(dataMat, classLabels, numIt=40):
 #     print "the Area Under the Curve is: ",ySum*xStep
 
 if __name__ == '__main__':
-    data, label = loadSimpleDataSet()
-    dataMat = np.mat(data)
-    m, n = np.shape(dataMat)
-    print m, n
+
+    # Simple Example
+    # data, label = loadSimpleDataSet()
+    # dataMat = np.mat(data)
+    # m, n = np.shape(dataMat)
+    # print m, n
+    # classifierArr = adaBoostWithDS(dataMat, label)
+    # print adaClassify([0, 0], classifierArr)
+
+
+    # Solve horse Colic DataSet
+    data, label = loadDataSet('/Users/fanghan/mlproject/ML_Learning/datasets/horseColicTraining2.txt')
+    classifierArr = adaBoostWithDS(np.mat(data), label, 10)
+    testdata, testlabel = loadDataSet('/Users/fanghan/mlproject/ML_Learning/datasets/horseColicTest2.txt')
+    predictLabel = adaClassify(testdata, classifierArr)
+    # print predictLabel
+
+
+    # Calc Error Rate
+    errMat = np.mat(np.ones((np.shape(testdata)[0],1)))
+    print errMat[predictLabel != np.mat(testlabel).T].sum() / np.shape(testdata)[0]
 
     # retArr = np.ones(m)
     # print retArr
@@ -159,5 +191,3 @@ if __name__ == '__main__':
     # attention the difference
     # np.ones(m)
     # np.ones((m, 1))
-    # buildStump(dataMat, label, D)
-    adaBoostWithDS(dataMat, label)
