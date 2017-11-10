@@ -60,7 +60,11 @@
 
 ##### 模型篇
 
-Logistic Regression - 二分类器
+**Logistic Regression - 二分类器**
+
+[逻辑回归[1] 解决二分类问题的思路](./notes/LogisticRegression_Tutorial_1.md)
+
+[逻辑回归[2] 模型求解](./notes/LogisticRegression_Tutorial_2.md)
 
 SoftMax Regression - 多分类器
 
