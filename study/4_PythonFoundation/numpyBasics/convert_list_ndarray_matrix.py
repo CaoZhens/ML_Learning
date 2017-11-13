@@ -36,23 +36,27 @@ print '==========3. matrix to list=========='
 print aMat.tolist()
 print aMat.T.tolist()
 
-# 4. ndarray/matrix - row to col
-print '==========4. ndarray/matrix - row to col=========='
+# 4. ndarray to list
+print '==========4. ndarray to list=========='
+print aArr.tolist()
+
+# 5. ndarray/matrix - row to col
+print '==========5. ndarray/matrix - row to col=========='
 aArr2 = aArr[:, np.newaxis]
 aMat2 = np.mat(aArr2)
 print aArr2, type(aArr2)
 print aMat[:, np.newaxis], type(aMat[:, np.newaxis])
 
-# 5. ndarray - col to row
-print '==========5. ndarray - col to row=========='
+# 6. ndarray - col to row
+print '==========6. ndarray - col to row=========='
 # Convert ndarray with 1 column to an array with M elements
 print np.squeeze(aArr2)
 print aArr2.reshape(-1)
 print aArr2.flatten()
 print aArr2.ravel()
 
-# 6. matrix - col to row directly
-print '==========6. matrix - col to row directly=========='
+# 7. matrix - col to row directly
+print '==========7. matrix - col to row directly=========='
 print aMat2.A1
 
 # Conclusion
