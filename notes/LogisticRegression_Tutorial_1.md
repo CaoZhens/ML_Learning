@@ -2,14 +2,14 @@
 
 ## 从回归问题到二分类问题
 
-前面介绍的线性回归模型，用于连续值预测；
-**提问：对于0-1问题（二分类问题），继续使用线性回归模型是否合适呢？** 
+前面介绍的线性回归模型用于连续值预测；
+**提问：对于0-1问题（二分类问题），继续使用回归模型是否合适呢？** 
 让我们来看一个直观举例：
 
 对比两图我们发现，x轴正向远端的样本点会干扰模型的判决平面，因此直接使用线性回归模型处理二分类问题是不合适的。
-**思考：能否找到一个函数，可以将连续值映射为0-1值？这样我们就可以利用线性回归与该函数的叠加，处理二分类问题了**。
+**思考：如果找到一个函数，可以将连续值映射至[0,1]，就可以解决二分类问题了**。
 
-## Sigmoid/Logistic Function
+## 直接给出sigmoid函数
 
 $$ g(z) = \frac{1}{1+e^{-z}} = \frac{e^z}{1+e^z}$$
 
@@ -20,12 +20,13 @@ $$ g(z)^{\prime} = g(z)(1-g(z))$$
 
 ## 逻辑回归建模
 
+对于二分类问题，不妨令$y \in [0, 1]$
 逻辑回归模型如下：
 基于单个样本：
-$$h_\theta(\mathbf{x}) = g(\theta^T\mathbf{x}) = \frac{1}{1+e^{-\theta^T\mathbf{x}}}$$
+$$p(y=1|\mathbf{x};\theta) = h_\theta(\mathbf{x}) = g(\theta^T\mathbf{x}) = \frac{1}{1+e^{-\theta^T\mathbf{x}}}$$
 
 基于多个样本：
-$$h_\theta(\mathbf{X}) = g(\mathbf{X}\theta) = \frac{1}{1+e^{-\mathbf{X}\theta}}$$
+$$p(\mathbf{y}=\vec{1}|\mathbf{X};\theta) = h_\theta(\mathbf{X}) = g(\mathbf{X}\theta) = \frac{1}{1+e^{-\mathbf{X}\theta}}$$
 
 备注：如果不明白为什么从$\theta^T\mathbf{x}$ 到 $\mathbf{X}\theta$，请[到这里](LinearRegression_Tutorial_1.md)重新看一遍$\mathbf{X}$的定义。
 

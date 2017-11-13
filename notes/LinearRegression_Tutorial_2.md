@@ -1,13 +1,13 @@
 # 线性回归（2）模型求解:最小二乘法与梯度下降法
 
-## 基于MSE准则求解
+## MSE准则
 
-定义误差函数(Loss Function)： 
+基于MSE准则，定义损失函数(Loss Function)： 
 $$
 J_m(\theta) = \frac{1}{2}\sum_{i=1}^{m}(\hat{y}^i - y^i)^2 = \frac{1}{2}\sum_{i=1}^{m}(\theta^T \mathbf{x}^i - y^i)^2
 $$
 
-基于最小均方误差准则（MLSE)求解模型参数：
+模型目标为：
 $$
 \theta = argmin_{\theta}J_m(\theta)
 $$
