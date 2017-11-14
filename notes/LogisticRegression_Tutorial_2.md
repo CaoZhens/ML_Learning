@@ -21,21 +21,30 @@ $$\theta = argmax_{\theta}l(\theta)=argmax_{\theta}logL(\theta)$$
 
 ### 伯努利分布先验假设
 
-二分类问题满足伯努利分布，即：$y  \sim Bernoulli(\phi) $
+二分类问题（不妨假设 $y^i \in [0, 1]$ ）满足伯努利分布，即：$y^i  \sim Bernoulli(\phi^i) $
 
 其中，
-$$p(y=1|\mathbf{x};\theta) = \phi  = h_\theta(\mathbf{x}) = g(\theta^T\mathbf{x}) = \frac{1}{1+e^{-\theta^T\mathbf{x}}}$$
-$$ p(y=0|\mathbf{x};\theta) = 1-\phi $$
+$$ \phi^i = p(y^i=1|\mathbf{x}^i;\theta) = h_\theta(\mathbf{x}^i) = g(\theta^T\mathbf{x}^i) = \frac{1}{1+e^{-\theta^T\mathbf{x}^i}}$$
+$$ p(y^i=0|\mathbf{x}^i;\theta) = 1-\phi^i $$
 
 ### 构造似然函数
 
 基于伯努利分布先验假设条件，
-$$p(y|\mathbf{x};\theta) = (h_\theta(\mathbf{x}))^{y^i}(1 - h_\theta(\mathbf{x}))^{1-y^i}$$
+$$p(y^i|\mathbf{x}^i;\theta) = (h_\theta(\mathbf{x}^i))^{y^i}(1 - h_\theta(\mathbf{x}^i))^{1-y^i}$$
 $$L(\theta) = P(\mathbf{y}|\mathbf{X};\theta) = \prod_{i=1}^m (h_\theta(\mathbf{x}^i))^{y^i}(1 - h_\theta(\mathbf{x}^i))^{1-y^i}$$
+
+### 对数似然函数
+
+基于极大似然估计求解：
+首先将$L(\theta)$转化为对数似然函数$l(\theta)$
+$$l(\theta) = logL(\theta) = \sum_{i=1}^m\left [ y^ilogh_{\theta}(\mathbf{x}^i) + (1-y^i)log(1-h_{\theta}(\mathbf{x}^i) \right ]$$
 
 ### 极大似然估计
 
-基于极大似然估计求解。
+$l(\theta)$对$\theta_j$求偏导并令偏导数为0:
+
+### 梯度下降法迭代求解
+
 
 
 
