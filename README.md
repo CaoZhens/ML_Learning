@@ -33,8 +33,8 @@
 #### Logistic回归
 **Logistic Regression - 二分类器**  
 [逻辑回归[1] - 解决二分类问题的思路](./notes/LogisticRegression_Tutorial_1.md)  
-[逻辑回归[2] - 模型求解](./notes/LogisticRegression_Tutorial_2.md)
-[逻辑回归[3] - 从损失函数的角度看逻辑回归](./notes/LogisticRegression_Tutorial_3.md)
+[逻辑回归[2] - 模型求解](./notes/LogisticRegression_Tutorial_2.md)  
+[逻辑回归[3] - 从损失函数的角度看逻辑回归](./notes/LogisticRegression_Tutorial_3.md)  
 **SoftMax Regression - 多分类器**  
 逻辑回归与最大熵模型  
 
@@ -46,6 +46,7 @@
 ![image](https://github.com/CaoZhens/ML_Learning/blob/master/study/7_LogisticRegression/pic/LogisticR_GD_FittingCurve.gif) 
 
 #### 决策树
+[决策树概述](./notes/DT_Tutorial_1.md)   
 分类决策树：ID3 / C4.5  
 分类回归树：CART树  
 树剪枝：Pruning  
@@ -57,31 +58,32 @@ Bootstrap与Bagging
 对比GBDT与XGboost  
 ... ...  
 
-### 机器学习
 
+## 附录A Python基础
 
-### 附录 Python基础
+### 重要的第三方库
 
-####  Package篇
-
-1 - Numpy Basics
-
-&emsp;[1.1 list / ndarray / matrix的相互转换](./study/4_PythonFoundation/numpyBasics/convert_list_ndarray_matrix.py)
-
-&emsp;1.2 Key Functions
+#### Numpy Basics
+[list、ndarray、matrix的相互转换](./study/4_PythonFoundation/numpyBasics/convert_list_ndarray_matrix.py)  
+1.2 Key Functions
 
 &emsp;&emsp;[1.2.1 shape](./study/4_PythonFoundation/numpyBasics/shape.py)
 
 &emsp;&emsp;[1.2.2 slices](./study/4_PythonFoundation/numpyBasics/slices.py)
 
-[2 - Scipy Basics](./study/4_PythonFoundation/scipyBasics/)
+#### [Scipy Basics](./study/4_PythonFoundation/scipyBasics/)
 
-[3 - Matplotlib Basics](./study/4_PythonFoundation/matplotlibBasics/)
+####[Matplotlib Basics](./study/4_PythonFoundation/matplotlibBasics/)
 
-[4 - scikit-learn Basics](./study/5_SklearnFoundation/script/)
+#### [scikit-learn Basics](./study/5_SklearnFoundation/script/)
 
-#### 综合篇
+### 综合应用
+[1 - 文件读取](./study/4_PythonFoundation/loadData/)  
+[2 - Python多线程](./study/4_PythonFoundation/multiThreading/)
 
-[1 - Python 文件读取](./study/4_PythonFoundation/loadData/)
+## 附录B 数据集
 
-[2 - Python 多线程](./study/4_PythonFoundation/multiThreading/)
+[1. 疝气病马存活情况数据集：Horse Colic Data Set](http://archive.ics.uci.edu/ml/datasets/Horse+Colic)
+*该数据集来自2010年1月11日的UCI机器学习数据库，原始数据包含368个样本和28个特征*
+**应用索引**
+[LogisticRegression with sklearn](./study/7_LogisticRegression/script/LogisticRegression_sklearn_HorseColic.py)
