@@ -12,6 +12,7 @@
 [机器学习的数学基础[2] - Gamma函数](./notes/1_Mathematical_Tutorial_2.md)  
 机器学习的数学基础[3] - 微积分在运算中的应用   
 [机器学习的数学基础[4] - Taylor公式及其应用](./notes/1_Mathematical_Tutorial_3.md)  
+[机器学习的数学基础[5] - 信息论基础](./notes/1_Mathematical_Tutorial_5.md)  
 概率论的应用[1] - 生日悖论  
 概率论的应用[2] - 组合数与信息熵  
 概率论的应用[3] - taylor公式与Gini系数&信息熵  
