@@ -44,8 +44,9 @@ print aArr.tolist()
 print '==========5. ndarray/matrix - row to col=========='
 aArr2 = aArr[:, np.newaxis]
 aMat2 = np.mat(aArr2)
-print aArr2, type(aArr2)
+print 'method1: aArr[:, np.newaxis]\n', aArr[:, np.newaxis], type(aArr[:, np.newaxis])  # method 1
 print aMat[:, np.newaxis], type(aMat[:, np.newaxis])
+print 'method2: np.transpose([aArr])\n', np.transpose([aArr]), type(np.transpose([aArr])) # method 2
 
 # 6. ndarray - col to row
 print '==========6. ndarray - col to row=========='
