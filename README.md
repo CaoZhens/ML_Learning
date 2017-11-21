@@ -48,8 +48,8 @@
 
 #### 决策树
 [决策树概述](./notes/DT_Tutorial_1.md)   
-分类决策树：ID3 / C4.5  
-分类回归树：CART树  
+[分类决策树的生成：ID3 / C4.5](./notes/DT_Tutorial_2.md)  
+[分类回归树的生成：CART](./notes/DT_Tutorial_3.md)  
 树剪枝：Pruning  
 
 #### 集成方法(Ensemble Methods)
@@ -74,7 +74,7 @@ Bootstrap与Bagging
 
 #### [Scipy Basics](./study/4_PythonFoundation/scipyBasics/)
 
-####[Matplotlib Basics](./study/4_PythonFoundation/matplotlibBasics/)
+#### [Matplotlib Basics](./study/4_PythonFoundation/matplotlibBasics/)
 
 #### [scikit-learn Basics](./study/5_SklearnFoundation/script/)
 
