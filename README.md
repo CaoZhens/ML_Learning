@@ -51,6 +51,7 @@
 [分类决策树的生成：ID3 / C4.5](./notes/DT_Tutorial_2.md)  
 [分类回归树的生成：CART](./notes/DT_Tutorial_3.md)  
 树剪枝：Pruning  
+[决策树的两要素与函数本质](./notes/DT_Tutorial_5.md)  
 
 #### 集成方法(Ensemble Methods)
 Bootstrap与Bagging  
