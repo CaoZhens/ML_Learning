@@ -22,7 +22,7 @@
 ### PART II 模型
 #### 线性回归
 [线性回归[1] - 模型建立](./notes/LinearRegression_Tutorial_1.md)  
-[线性回归[2] - 模型求解：最小二乘法与梯度下降法](./notes/LinearRegression_Tutorial_2.md)  
+[线性回归[2] - 损失函数与模型求解：最小二乘法与梯度下降法](./notes/LinearRegression_Tutorial_2.md)  
 [线性回归[3] - 最大似然估计与线性回归模型的先验假设](./notes/LinearRegression_Tutorial_3.md)  
 [线性回归[4] - 最大似然估计与最小二乘法的等价性](./notes/LinearRegression_Tutorial_4.md)  
 线性回归的扩展[1] - 对特征做扩展 - 多项式回归Polynomial Regression  
@@ -41,6 +41,7 @@
 
 #### 广义线性模型
 **从线性回归、逻辑回归到广义线性模型**  
+[总结：如何形式化描述机器学习问题？](./notes/Summary_Tutorial_1.md)  
 
 ##### 算法篇
 
@@ -55,11 +56,14 @@
 
 #### 集成方法(Ensemble Methods)
 Bootstrap与Bagging  
-提升：Boosting  
-&emsp;Adaboost  
+Boosting概述  
+Adaboost  
 对比GBDT与XGboost  
 ... ...  
 
+### PART III 个人总结
+[如何形式化描述机器学习问题？](./notes/Summary_Tutorial_1.md) 
+[机器学习中的损失函数](./notes/Summary_Tutorial_2.md)  
 
 ## 附录A Python基础
 
