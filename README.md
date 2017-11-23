@@ -3,14 +3,13 @@
 ## 访问之前
 **如何浏览笔记**  
 由于笔记中包含大量LaTeX公式，而GitHub Flavored Markdown（GFM）不支持LaTeX，因此直接浏览会看到大量乱码。  
-建议使用**Chrome浏览器**并安装扩展[**GitHub with MathJax**](https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima)，可以解决80%以上的乱码问题。  
-其余乱码将随项目完善，逐渐解决。
+建议使用**Chrome浏览器**并安装扩展[**GitHub with MathJax**](https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima)，可以解决80%以上的乱码问题。其余乱码将随项目完善，逐渐解决。
 
 ## Machine Learning
 ### PART I 数学基础
 [机器学习的数学基础[1] - 自然底数e](./notes/1_Mathematical_Tutorial_1.md)  
 [机器学习的数学基础[2] - Gamma函数](./notes/1_Mathematical_Tutorial_2.md)  
-机器学习的数学基础[3] - 微积分在运算中的应用   
+机器学习的数学基础[3] - 微积分在运算中的应用  
 [机器学习的数学基础[4] - Taylor公式及其应用](./notes/1_Mathematical_Tutorial_3.md)  
 [机器学习的数学基础[5] - 信息论基础](./notes/1_Mathematical_Tutorial_5.md)  
 概率论的应用[1] - 生日悖论  
@@ -56,13 +55,13 @@
 
 #### 集成方法(Ensemble Methods)
 Bootstrap与Bagging  
-Boosting概述  
+[Boosting概述](./notes/Boosting_Tutorial_1.md)  
 Adaboost  
 对比GBDT与XGboost  
 ... ...  
 
 ### PART III 个人总结
-[如何形式化描述机器学习问题？](./notes/Summary_Tutorial_1.md) 
+[如何形式化描述机器学习问题？](./notes/Summary_Tutorial_1.md)  
 [机器学习中的损失函数](./notes/Summary_Tutorial_2.md)  
 
 ## 附录A Python基础
