@@ -56,6 +56,7 @@
 #### 集成方法(Ensemble Methods)
 Bootstrap与Bagging  
 [Boosting概述](./notes/Boosting_Tutorial_1.md)  
+[XGBoost算法原理](./notes/Boosting_Tutorial_2.md)  
 Adaboost  
 对比GBDT与XGboost  
 ... ...  
