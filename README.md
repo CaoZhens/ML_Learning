@@ -1,6 +1,8 @@
 # 机器学习笔记
 本项目用于记录学习笔记、代码及其它内容
 ## 访问之前
+**机器学习概述**  
+机器学习是一门跨学科领域，涉及高等数学、概率论与统计、信息论、最优化理论、计算机科学等多个领域。近年来，随着硬件成本的不断下降，以及大数据与分布式计算技术的发展完善，机器学习由理论时代进入了规模应用时代。  
 **如何浏览笔记**  
 由于笔记中包含大量LaTeX公式，而GitHub Flavored Markdown（GFM）不支持LaTeX，因此直接浏览会看到大量乱码。  
 建议使用**Chrome浏览器**并安装扩展[**GitHub with MathJax**](https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima)，可以解决80%以上的乱码问题。其余乱码将随项目完善，逐渐解决。
@@ -27,8 +29,8 @@
 线性回归的扩展[1] - 对特征做扩展 - 多项式回归Polynomial Regression  
 线性回归的扩展[2] - 损失函数引入Normalization - Lasso/Ridge/ElasticNet  
 附：梯度下降法 —— 批梯度下降与随机梯度下降  
-<img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/6_LinearRegression/pic/LinearR_GD_FittingCurve.gif" alt="" data-canonical-src="" width="400" height="400" />
-<img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/6_LinearRegression/pic/LinearR_GD_LossFuncSurface.gif" alt="" data-canonical-src="" width="400" height="400" />
+<img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/6_LinearRegression/pic/LinearR_GD_FittingCurve.gif" alt="" data-canonical-src="" width="420" height="400" />
+<img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/6_LinearRegression/pic/LinearR_GD_LossFuncSurface.gif" alt="" data-canonical-src="" width="420" height="400" />
 
 #### Logistic回归
 **Logistic Regression - 二分类器**  
