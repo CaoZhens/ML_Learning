@@ -4,7 +4,7 @@ Created on Nov 29, 2017
 @author:
     CaoZhen
 @description:
-    numpy.cov
+    numpy.cov - Estimate a covariance matrix, given data and weights.
 @reference:
     1. Dash - numpy.cov
 '''
