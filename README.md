@@ -3,6 +3,7 @@
 ## 访问之前
 **机器学习概述**  
 机器学习是一门跨学科领域，涉及高等数学、概率论与统计、信息论、最优化理论、计算机科学等多个领域。近年来，随着硬件成本的不断下降，以及大数据与分布式计算技术的发展完善，机器学习由理论时代进入了规模应用时代。  
+
 **如何浏览笔记**  
 由于笔记中包含大量LaTeX公式，而GitHub Flavored Markdown（GFM）不支持LaTeX，因此直接浏览会看到大量乱码。  
 建议使用**Chrome浏览器**并安装扩展[**GitHub with MathJax**](https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima)，可以解决80%以上的乱码问题。其余乱码将随项目完善，逐渐解决。
@@ -14,6 +15,9 @@
 机器学习的数学基础[3] - 微积分在运算中的应用  
 [机器学习的数学基础[4] - Taylor公式及其应用](./notes/1_Mathematical_Tutorial_3.md)  
 [机器学习的数学基础[5] - 信息论基础](./notes/1_Mathematical_Tutorial_5.md)  
+[机器学习的数学基础[6] - 概率论中的数字特征](./notes/Probability_Tutorial_2.md)  
+[机器学习的数学基础[7] - 对协方差与皮尔逊相关系数的进一步讨论](./notes/Probability_Tutorial_1.md)  
+
 概率论的应用[1] - 生日悖论  
 概率论的应用[2] - 组合数与信息熵  
 概率论的应用[3] - taylor公式与Gini系数&信息熵  
