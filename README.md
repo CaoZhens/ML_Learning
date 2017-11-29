@@ -12,7 +12,7 @@
 ### PART I 数学基础
 [机器学习的数学基础[1] - 自然底数e](./notes/1_Mathematical_Tutorial_1.md)  
 [机器学习的数学基础[2] - Gamma函数](./notes/1_Mathematical_Tutorial_2.md)  
-机器学习的数学基础[3] - 微积分在运算中的应用  
+[机器学习的数学基础[3] - 微积分在近似运算中的应用](./notes/1_Mathematical_Tutorial_4.md)  
 [机器学习的数学基础[4] - Taylor公式及其应用](./notes/1_Mathematical_Tutorial_3.md)  
 [机器学习的数学基础[5] - 信息论基础](./notes/1_Mathematical_Tutorial_5.md)  
 [机器学习的数学基础[6] - 概率论中的数字特征](./notes/Probability_Tutorial_2.md)  
