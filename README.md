@@ -44,9 +44,9 @@
 **SoftMax Regression - 多分类器**  
 逻辑回归与最大熵模型  
 
-#### 广义线性模型
-**从线性回归、逻辑回归到广义线性模型**  
-[总结：如何形式化描述机器学习问题？](./notes/Summary_Tutorial_1.md)  
+#### 广义线性模型 Generalized Linear Model,GLM
+[GLM[1] - 指数分布族](./notes/GLM_Tutorial_1.md)  
+[GLM[2] - 广义线性模型](./notes/GLM_Tutorial_2.md)
 
 ##### 算法篇
 
