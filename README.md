@@ -14,9 +14,9 @@
 [机器学习的数学基础[2] - Gamma函数](./notes/1_Mathematical_Tutorial_2.md)  
 [机器学习的数学基础[3] - 微积分在近似运算中的应用](./notes/1_Mathematical_Tutorial_4.md)  
 [机器学习的数学基础[4] - Taylor公式及其应用](./notes/1_Mathematical_Tutorial_3.md)  
-[机器学习的数学基础[5] - 信息论基础](./notes/1_Mathematical_Tutorial_5.md)  
-[机器学习的数学基础[6] - 概率论中的数字特征](./notes/Probability_Tutorial_2.md)  
-[机器学习的数学基础[7] - 对协方差与皮尔逊相关系数的进一步讨论](./notes/Probability_Tutorial_1.md)  
+[机器学习的数学基础[5] - 概率论中的数字特征](./notes/Probability_Tutorial_2.md)  
+[机器学习的数学基础[6] - 对协方差与皮尔逊相关系数的进一步讨论](./notes/Probability_Tutorial_1.md)  
+[机器学习的数学基础[7] - 信息论基础](./notes/1_Mathematical_Tutorial_5.md)  
 
 概率论的应用[1] - 生日悖论  
 概率论的应用[2] - 组合数与信息熵  
@@ -67,7 +67,13 @@ Adaboost
 对比GBDT与XGboost  
 ... ...  
 
-### PART III 个人总结
+### PART III 工程化应用
+
+#### 特征工程
+[中心归一标准化(Z-Score)与正态标准化(Normalization)]()  
+<img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/zscore_normalization_1.png" alt="" data-canonical-src=""  />  
+
+### PART IV 个人总结
 [如何形式化描述机器学习问题？](./notes/Summary_Tutorial_1.md)  
 [机器学习中的损失函数](./notes/Summary_Tutorial_2.md)  
 
@@ -95,7 +101,7 @@ Adaboost
 
 ## 附录B 数据集
 
-[1. 疝气病马存活情况数据集：Horse Colic Data Set](http://archive.ics.uci.edu/ml/datasets/Horse+Colic)
+[1. 疝气病马存活情况数据集：Horse Colic Data Set](http://archive.ics.uci.edu/ml/datasets/Horse+Colic)  
 *该数据集来自2010年1月11日的UCI机器学习数据库，原始数据包含368个样本和28个特征*
 **应用索引**
 [LogisticRegression with sklearn](./study/7_LogisticRegression/script/LogisticRegression_sklearn_HorseColic.py)
