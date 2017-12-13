@@ -66,11 +66,11 @@ Adaboost
 
 ### PART III 工程化应用
 
-#### 特征工程 Feature Engineering
-[特征工程[1] - 数据摘要 Summary of dataSet](./notes/FeatureEngineering_1.md) [例1]() [例2](./study/10_FeatureEngineering/files/PPD_summary_da.csv)  
+#### 特征工程 Feature Engineering
+[特征工程[1] - 数据摘要 Summary of dataSet](./notes/FeatureEngineering_1.md) [例1]() [例2](./study/10_FeatureEngineering/files/PPD_summary_da.csv)  
 [特征工程[2] - 日期特征的处理](./notes/FeatureEngineering_2.md)  
 [特征工程[3] - 逻辑特征的处理](./notes/FeatureEngineering_3.md)  
-[特征工程[4] - 标准化处理：中心归一标准化(Z-Score)与正态标准化(Normalization)]()  
+[特征工程[4] - 标准化处理：中心归一标准化(Z-Score)与正态标准化(Normalization)]()  
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/zscore_normalization_1.png" alt="" data-canonical-src=""  />  
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/zscore_normalization_2.png" alt="" data-canonical-src=""  />  
 ### PART IV 个人总结
@@ -79,14 +79,12 @@ Adaboost
 
 ## 附录A Python基础
 
-### 重要的第三方库
+### 重要的第三方库
 
 #### Numpy Basics
 [list、ndarray、matrix的相互转换](./study/4_PythonFoundation/numpyBasics/convert_list_ndarray_matrix.py)  
-1.2 Key Functions
-
-&emsp;&emsp;[1.2.1 shape](./study/4_PythonFoundation/numpyBasics/shape.py)
-
+1.2 Key Functions  
+&emsp;&emsp;[1.2.1 shape](./study/4_PythonFoundation/numpyBasics/shape.py)  
 &emsp;&emsp;[1.2.2 slices](./study/4_PythonFoundation/numpyBasics/slices.py)
 
 #### [Scipy Basics](./study/4_PythonFoundation/scipyBasics/)
@@ -99,9 +97,9 @@ Adaboost
 [1 - 文件读取](./study/4_PythonFoundation/loadData/)  
 [2 - Python多线程](./study/4_PythonFoundation/multiThreading/)
 
-## 附录B 数据集
+## 附录B 数据集
 
 [1. 疝气病马存活情况数据集：Horse Colic Data Set](http://archive.ics.uci.edu/ml/datasets/Horse+Colic)  
-*该数据集来自2010年1月11日的UCI机器学习数据库，原始数据包含368个样本和28个特征*
-**应用索引**
+*该数据集来自2010年1月11日的UCI机器学习数据库，原始数据包含368个样本和28个特征*  
+**应用索引**  
 [LogisticRegression with sklearn](./study/7_LogisticRegression/script/LogisticRegression_sklearn_HorseColic.py)
