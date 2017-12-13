@@ -9,7 +9,7 @@
 建议使用**Chrome浏览器**并安装扩展[**GitHub with MathJax**](https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima)，可以解决80%以上的乱码问题。其余乱码将随项目完善，逐渐解决。
 
 ## Machine Learning
-### PART I 数学基础
+### PART I 数学基础 Foundation of mathematics
 [机器学习的数学基础[1] - 自然底数e](./notes/1_Mathematical_Tutorial_1.md)  
 [机器学习的数学基础[2] - Gamma函数](./notes/1_Mathematical_Tutorial_2.md)  
 [机器学习的数学基础[3] - 微积分在近似运算中的应用](./notes/1_Mathematical_Tutorial_4.md)  
@@ -24,8 +24,8 @@
 概率论的应用[4] - taylor公式与泊松分布  
 概率论的应用[5] - 本福特定律  
 
-### PART II 模型
-#### 线性回归
+### PART II 模型 Model
+#### 线性回归 Linear Regression
 [线性回归[1] - 模型建立](./notes/LinearRegression_Tutorial_1.md)  
 [线性回归[2] - 损失函数与模型求解：最小二乘法与梯度下降法](./notes/LinearRegression_Tutorial_2.md)  
 [线性回归[3] - 最大似然估计与线性回归模型的先验假设](./notes/LinearRegression_Tutorial_3.md)  
@@ -36,11 +36,12 @@
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/6_LinearRegression/pic/LinearR_GD_FittingCurve.gif" alt="" data-canonical-src="" width="420" height="400" />
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/6_LinearRegression/pic/LinearR_GD_LossFuncSurface.gif" alt="" data-canonical-src="" width="420" height="400" />
 
-#### Logistic回归
+#### 逻辑回归 Logistic Regression
 **Logistic Regression - 二分类器**  
 [逻辑回归[1] - 解决二分类问题的思路](./notes/LogisticRegression_Tutorial_1.md)  
 [逻辑回归[2] - 模型求解](./notes/LogisticRegression_Tutorial_2.md)  
 [逻辑回归[3] - 从损失函数的角度看逻辑回归](./notes/LogisticRegression_Tutorial_3.md)  
+<img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/7_LogisticRegression/pic/LogisticR_GD_FittingCurve.gif" alt="" data-canonical-src="" width="420" height="400" />  
 **SoftMax Regression - 多分类器**  
 逻辑回归与最大熵模型  
 
@@ -48,11 +49,7 @@
 [GLM[1] - 指数分布族](./notes/GLM_Tutorial_1.md)  
 [GLM[2] - 广义线性模型](./notes/GLM_Tutorial_2.md)
 
-##### 算法篇
-
-![image](https://github.com/CaoZhens/ML_Learning/blob/master/study/7_LogisticRegression/pic/LogisticR_GD_FittingCurve.gif) 
-
-#### 决策树
+#### 决策树 Desicion Tree
 [决策树概述](./notes/DT_Tutorial_1.md)   
 [分类决策树的生成：ID3 / C4.5](./notes/DT_Tutorial_2.md)  
 [分类回归树的生成：CART](./notes/DT_Tutorial_3.md)  
@@ -69,10 +66,13 @@ Adaboost
 
 ### PART III 工程化应用
 
-#### 特征工程
-[中心归一标准化(Z-Score)与正态标准化(Normalization)]()  
+#### 特征工程 Feature Engineering
+[特征工程[1] - 数据摘要 Summary of dataSet](./notes/FeatureEngineering_1.md) [例1]() [例2](./study/10_FeatureEngineering/files/PPD_summary_da.csv)  
+[特征工程[2] - 日期特征的处理](./notes/FeatureEngineering_2.md)  
+[特征工程[3] - 逻辑特征的处理](./notes/FeatureEngineering_3.md)  
+[特征工程[4] - 标准化处理：中心归一标准化(Z-Score)与正态标准化(Normalization)]()  
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/zscore_normalization_1.png" alt="" data-canonical-src=""  />  
-
+<img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/zscore_normalization_2.png" alt="" data-canonical-src=""  />  
 ### PART IV 个人总结
 [如何形式化描述机器学习问题？](./notes/Summary_Tutorial_1.md)  
 [机器学习中的损失函数](./notes/Summary_Tutorial_2.md)  
