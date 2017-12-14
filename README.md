@@ -73,6 +73,11 @@ Adaboost
 [特征工程[4] - 标准化处理：中心归一标准化(Z-Score)与正态标准化(Normalization)]()  
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/zscore_normalization_1.png" alt="" data-canonical-src=""  />  
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/zscore_normalization_2.png" alt="" data-canonical-src=""  />  
+
+#### 代码复用 Code Reuse
+[代码复用[1] - 概述](./notes/CodeReuse_1.md)  
+[代码复用[2] - 两种基本形式及Pandas实现](./notes/CodeReuse_2.md)  
+
 ### PART IV 个人总结
 [如何形式化描述机器学习问题？](./notes/Summary_Tutorial_1.md)  
 [机器学习中的损失函数](./notes/Summary_Tutorial_2.md)  
