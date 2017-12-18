@@ -75,10 +75,10 @@ Adaboost
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/zscore_normalization_2.png" alt="" data-canonical-src=""  />  
 
 #### 代码复用 Code Reuse
-[代码复用[1] - 概述与两种基本形式](./notes/CodeReuse_1.md)  
-<img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/CodeReuse_pattern_1.png" alt="" data-canonical-src=""  />  
+[代码复用[1] - 概述与两种基本形式](./notes/CodeReuse_1.md)  
+<img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/CodeReuse_pattern_1.png" alt="" data-canonical-src=""  />
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/CodeReuse_pattern_2.png" alt="" data-canonical-src=""  />  
-[代码复用[2] - Pandas实现](./notes/CodeReuse_2.md)  
+[代码复用[2] - Pandas实现](./notes/CodeReuse_2.md)  
 
 
 ### PART IV 个人总结
