@@ -42,6 +42,7 @@
 [逻辑回归[2] - 模型求解](./notes/LogisticRegression_Tutorial_2.md)  
 [逻辑回归[3] - 从损失函数的角度看逻辑回归](./notes/LogisticRegression_Tutorial_3.md)  
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/7_LogisticRegression/pic/LogisticR_GD_FittingCurve.gif" alt="" data-canonical-src="" width="420" height="400" />  
+sklearn-LR参数详解  
 **SoftMax Regression - 多分类器**  
 逻辑回归与最大熵模型  
 
@@ -62,6 +63,7 @@ Bootstrap与Bagging
 [XGBoost算法原理](./notes/Boosting_Tutorial_2.md)  
 Adaboost  
 对比GBDT与XGboost  
+sklearn-GBDT参数详解
 ... ...  
 
 ### PART III 工程化应用
@@ -80,6 +82,8 @@ Adaboost
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/CodeReuse_pattern_2.png" alt="" data-canonical-src="" width="420"  />  
 [代码复用[2] - Pandas实现](./notes/CodeReuse_2.md)  
 
+#### 黑科技 Tricks
+[sklearn调参基础——以GBM算法为例](./notes/ParaTuning_GBM.md)
 
 ### PART IV 个人总结
 [如何形式化描述机器学习问题？](./notes/Summary_Tutorial_1.md)  
