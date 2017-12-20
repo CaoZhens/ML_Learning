@@ -20,7 +20,7 @@
 
 ### GBM调参步骤
 1. Running a Baseline Model
-<img src="https://github.com/CaoZhens/ML_Learning/tree/master/study/10_FeatureEngineering/pic/GBM_TunPara_Baseline.png" alt="" data-canonical-src=""  />
+<img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/GBM_TunPara_Baseline.png" alt="" data-canonical-src=""  />  
 
 2. Tunning the number of estimators(`n_estimator`) for a relatively high learning rate
 
@@ -33,4 +33,4 @@
 
 >0.1 is assumed to be a good learning rate to start with. Let's try to find the optimum number of estimators requried for this.
 
-<img src="https://github.com/CaoZhens/ML_Learning/tree/master/study/10_FeatureEngineering/pic/GBM_TunPara_GS_n_estimator.png" alt="" data-canonical-src=""  />  
+<img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/GBM_TunPara_GS_n_estimator.png" alt="" data-canonical-src=""  />  
