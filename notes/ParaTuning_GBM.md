@@ -1,6 +1,7 @@
 # sklearn调参基础——以GBM算法为例
 ## 声明
-本文档参考自[Analyticsvidhya：Complete Guide to Parameter Tuning in Gradient Boosting (GBM) in Python](https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/#)。主要对作者Aarshay Jain阐述的GBM调参方法进行了梳理与总结。  
+本文档参考自[Analyticsvidhya：Complete Guide to Parameter Tuning in Gradient Boosting (GBM) in Python](https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/#)。  
+主要对作者Aarshay Jain阐述的GBM调参方法进行了梳理与总结。  
 原文中译版本[CSDN-寒小阳机器学习系列-Python中Gradient Boosting Machine(GBM）调参方法详解](http://blog.csdn.net/han_xiaoyang/article/details/52663170)  
 
 ## GBM模型参数总结
@@ -8,8 +9,7 @@
 请参考文章
 
 ## GBM调参方法总结
-
-备注：本文的调参结果和[原文](https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/#)有一定差异。重点放在思路与步骤，而不是调参结果上。
+备注：本文的调参结果和[原文](https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/#)有一定差异。重点放在思路与步骤，而不是调参结果上。
 
 ### GBM调参基本思路
 
@@ -58,8 +58,14 @@
 #### 4. Tune `subsample` and Lower Learning Rate
 ##### 4.1 Tune `subsample`
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/GBM_TunPara_GS_4_1.png" alt="" data-canonical-src=""  />  
+
 ##### 4.2 Decrease the learning rate to half, with twice the number of trees.
+
+**learning_rate=0.05, n_estimators=120**  
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/GBM_TunPara_GS_4_2_1.png" alt="" data-canonical-src=""  />  
+**learning_rate=0.01, n_estimators=600**  
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/GBM_TunPara_GS_4_2_2.png" alt="" data-canonical-src=""  />  
+**learning_rate=0.005, n_estimators=1200**  
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/GBM_TunPara_GS_4_2_3.png" alt="" data-canonical-src=""  />  
+**learning_rate=0.005, n_estimators=1500**  
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/GBM_TunPara_GS_4_2_4.png" alt="" data-canonical-src=""  />  
