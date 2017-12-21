@@ -1,4 +1,4 @@
-# sklearn调参基础——以GBM算法为例
+# sklearn调参实战——GBM算法
 ## 声明
 本文档参考自[Analyticsvidhya：Complete Guide to Parameter Tuning in Gradient Boosting (GBM) in Python](https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/#)。  
 主要对作者Aarshay Jain阐述的GBM调参方法进行了梳理与总结。  
