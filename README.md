@@ -83,7 +83,12 @@ sklearn-GBDT参数详解
 [代码复用[2] - Pandas实现](./notes/CodeReuse_2.md)  
 
 #### 黑科技 Tricks
-[sklearn调参基础——以GBM算法为例](./notes/ParaTuning_GBM.md)
+**模型调参**  
+sklearn调参基础——模型概览  
+<img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/10_FeatureEngineering/pic/TunPara_Tutorial.png" alt="" data-canonical-src=""  />  
+sklearn调参实战——LR  
+[sklearn调参实战——GBM算法](./notes/ParaTuning_GBM.md)  
+sklearn调参实战——XGBoost
 
 ### PART IV 个人总结
 [如何形式化描述机器学习问题？](./notes/Summary_Tutorial_1.md)  
