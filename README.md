@@ -18,8 +18,9 @@
 [机器学习的数学基础[6] - 对协方差与皮尔逊相关系数的进一步讨论](./notes/Probability_Tutorial_1.md)  
 [机器学习的数学基础[7] - 信息论基础](./notes/1_Mathematical_Tutorial_5.md)  
 
+
 概率论的应用[1] - 生日悖论  
-概率论的应用[2] - 组合数与信息熵  
+[概率论的应用[2] - 组合数与信息熵](./notes/Probability_Tutorial_3.md)  
 概率论的应用[3] - taylor公式与Gini系数&信息熵  
 概率论的应用[4] - taylor公式与泊松分布  
 概率论的应用[5] - 本福特定律  
