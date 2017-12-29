@@ -16,4 +16,18 @@ $$C_n^m = A_n^m / m! = \frac{n!}{(n-m)!m!}$$
 针对上面所描述的装箱问题，$n$个物品所需的比特数记为：
 $$h = \log_2{\frac{n!}{n_1!n_2!\cdots n_k!}}$$
 如果平摊到每一个物品，需要的比特数记为：
-$$H = \frac1n\log_2{\frac{n!}{n_1!n_2!\cdots n_k!}}$$
+$$H = \frac1n\log_2{\frac{n!}{n_1!n_2!\cdots n_k!}}=\frac1n\left(\log_2{n!} - \sum_i\log_2{n_i!}\right)$$
+下面对$H$求$n$趋近于无穷大时（$n_i$也趋近于无穷大）的值。**即：计算装箱问题时，保存每个物品的投放结果所需要的平均比特数目。**
+$$H = \lim_{n \to \infty}\frac1n\left(\log_2{n!} - \sum_i\log_2{n_i!}\right)$$
+
+根据[机器学习的数学基础[3] - 微积分在近似运算中的应用](./1_Mathematical_Tutorial_4.md)中的结论：  
+> $\ln N! \approx N\ln{N}-N$
+
+化简上式得：
+$$H = \lim_{n \to \infty}\frac1n\left(\log_2{n!} - \sum_i\log_2{n_i!}\right) = \frac1n\left( n\log{n}-n - \sum_in_i\log{n_i}-n_i\right) = \frac1n\left( n\log{n} - \sum_in_i\log{n_i} -n +\sum_i{n_i}\right)$$
+其中，$n = \sum_i{n_i}$
+$$H = \frac1n\left( n\log{n} - \sum_in_i\log{n_i} \right) = \frac1n\left( \sum_i{n_i}\log{n} - \sum_in_i\log{n_i} \right) = \sum_i{\frac{n_i}{n}}\log{\frac{n}{n_i}} = -\sum_i{\frac{n_i}{n}}\log{\frac{n_i}{n}}$$
+即：
+$$H = -\sum_i{\frac{n_i}{n}}\log{\frac{n_i}{n}} = -\sum_i{p_i}\log{p_i}$$
+
+**不失一般性，对于某离散概率分布，熵的意义是：该概率分布下，记录一次事件发生所需要的平均比特数目。**
