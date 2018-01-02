@@ -25,6 +25,8 @@
 概率论的应用[4] - taylor公式与泊松分布  
 概率论的应用[5] - 本福特定律  
 
+[最优化算法[1] - 无约束优化问题的求解：梯度下降法，牛顿法](./notes/Optimization_Tutorial_1.md)  
+
 ### PART II 模型 Model
 #### 线性回归 Linear Regression
 [线性回归[1] - 模型建立](./notes/LinearRegression_Tutorial_1.md)  
@@ -33,7 +35,6 @@
 [线性回归[4] - 最大似然估计与最小二乘法的等价性](./notes/LinearRegression_Tutorial_4.md)  
 线性回归的扩展[1] - 对特征做扩展 - 多项式回归Polynomial Regression  
 线性回归的扩展[2] - 损失函数引入Normalization - Lasso/Ridge/ElasticNet  
-附：梯度下降法 —— 批梯度下降与随机梯度下降  
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/6_LinearRegression/pic/LinearR_GD_FittingCurve.gif" alt="" data-canonical-src="" width="420" height="400" />
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/6_LinearRegression/pic/LinearR_GD_LossFuncSurface.gif" alt="" data-canonical-src="" width="420" height="400" />
 
@@ -60,7 +61,8 @@ sklearn-LR参数详解
 
 #### 集成方法(Ensemble Methods)
 Bootstrap与Bagging  
-[Boosting概述](./notes/Boosting_Tutorial_1.md)  
+[Boosting概述之一：从参数空间到函数空间](./notes/Boosting_Tutorial_0.md)  
+[Boosting概述之二](./notes/Boosting_Tutorial_1.md)   
 [XGBoost算法原理](./notes/Boosting_Tutorial_2.md)  
 Adaboost  
 对比GBDT与XGboost  
