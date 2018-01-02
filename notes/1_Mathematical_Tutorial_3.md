@@ -1,14 +1,16 @@
 # 机器学习的数学基础（3）Taylor公式及其应用
-
 ## 泰勒公式
-
-首先，不加证明地给出Taylor公式：
-$$f(x) \approx f(x_0) + f^{\prime}(x_0)(x-x_0)+ \ldots + \frac{f^{\prime\prime}(x_0)}{2!}(x-x_0)^2 + \ldots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n $$
+### 定义
+利用函数$f$在某点$x_0$处的**信息（们）**，**描述**该函数在该点**附近的取值**。
+### 基本形式
+$$f(x) \approx f(x_0) + f^{\prime}(x_0)(x-x_0)+ \frac{f^{\prime\prime}(x_0)}{2!}(x-x_0)^2 + \ldots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n $$
 特别地，当$x_0=0$时，对应公式为麦克劳林公式：
 $$f(x) \approx f(0) + f^{\prime}(0)x+ \ldots + \frac{f^{\prime\prime}(0)}{2!}x^2 + \ldots + \frac{f^{(n)}(0)}{n!}x^n $$
+### 迭代形式
+令$x^t - x^{t-1} = \Delta{x}$，将函数$f(x^t)$在$x^{t-1}$处做泰勒展开：
+$$f(x^t) \approx f(x^{t-1}) + f^{\prime}(x^{t-1})\Delta{x} + \frac12f^{\prime\prime}(x^{t-1}){\Delta{x}}^2$$
 
-## 备注：泰勒公式的证明思路
-
+### 泰勒公式的证明思路
 具体的严格证明比较复杂，请参考各类《高等数学》书籍，此处仅描述简要证明思路。
 1. 根据函数可导与可微的等价性，以及微分在近似计算中的应用，有：
 $$f(x_0+\Delta{x}) \approx f(x_0) + f^{\prime}(x_0)\Delta{x}$$
@@ -47,3 +49,5 @@ $$e^x \approx 1 + x + \frac{1}{2!}x^2 + \ldots + \frac{1}{n!}x^n $$
 代回$e^x$:
 $$e^x = e^{{\rm ln}2 N + r} = 2^N e^r$$
 其中，$r < 0.5$，因此很容易通过泰勒公式得到$e^r$的近似值。
+
+### 应用三：Taylor公式与梯度下降法&牛顿法
