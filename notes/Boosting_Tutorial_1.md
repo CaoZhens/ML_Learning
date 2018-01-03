@@ -1,4 +1,4 @@
-# Boosting概述
+# Boosting概述之二：模型表达式
 
 ## 引言
 
@@ -10,36 +10,25 @@
 
 ## 回顾
 
-回顾：[如何形式化描述机器学习问题？](./Summary_Tutorial_1.md)  
-> 已知$m$个样本，其中第$i$个样本记为$\{\mathbf{x}^i, y^i\}$  
-待建立的模型记为$Model(\mathbf{x}, \theta)$  
-为了下面公式表达方便，也可记为$F(\mathbf{x}, \theta)$  
-建立损失函数
-$$L(F(\mathbf{x}, \theta), y)$$
-待求解参数
-$$\theta = argmin_{\theta}L(F(\mathbf{x}, \theta), y)$$
+在[如何形式化描述机器学习问题？](./Summary_Tutorial_1.md)一文中，机器学习求最优参数的数学化描述如下：
+$$\theta^* = argmin_{\theta}L(F(\mathbf{x}, \theta), y)$$
 
 损失函数是关于$\theta$的函数。
 
 ## Boosting
 
 ### 换一个角度看待损失函数
-不再把损失函数看成关于$\theta$的函数，**而是看成关于模型$F$的函数。** 
-
-### 重新对机器学习问题进行描述
-已知$m$个样本，其中第$i$个样本记为$\{\mathbf{x}^i, y^i\}$  
-待建立的模型记为$Model(\mathbf{x})$  
-为了下面公式表达方便，也可记为$F(\mathbf{x})$  
-建立损失函数
-$$L(F(\mathbf{x}), y)$$
-待求解的最优模型是使得损失函数期望最小的模型，即：
+根据[Boosting概述之一：从参数空间到函数空间](./Boosting_Tutorial_0.md)的思路，不再把损失函数看成关于$\theta$的函数，**而是看成关于$F$的函数。**  
+因此，原先参数空间上的优化问题：
+$$\theta^* = argmin_{\theta}L(F(\mathbf{x}, \theta), y)$$
+转化为函数空间上的优化问题：
 $$F^* = argminE_{\{x,y\}}\left(L(F(\mathbf{x}), y)\right)$$
 
-###  换一个角度看待模型
-将模型$F(\mathbf{x})$看成一组基模型$f_i(\mathbf{x})$的加权和，即：
+### 加法模型
+根据[Boosting概述之一：从参数空间到函数空间](./Boosting_Tutorial_0.md)的思路，将模型$F(\mathbf{x})$看成一组基模型$f_i(\mathbf{x})$的加权和，即：
 $$F(\mathbf{x}) = \sum_{i=1}^M \gamma_i f_i(\mathbf{x}) + const$$
 **即：求解模型$F$转化为求解每一个基模型$f_i$及相应的权值$\gamma_i$**  
-备注：实际上，权值$\gamma_i$也可以看作$f_i$的一部分，因此后续推导过程不再考虑$\gamma_i$，上式可改写为：
+备注：实际上权值$\gamma_i$也可以看作$f_i$的一部分，因此后续推导过程不再考虑$\gamma_i$，上式可改写为：
 $$F(\mathbf{x}) = \sum_{i=1}^M f_i(\mathbf{x}) + const$$
 
 ### 基于贪心法的模型表达式
@@ -63,12 +52,3 @@ $$F_{t-1}(\mathbf{x}^i) = \hat{y}_i^{(t-1)}$$
 
 定义损失函数(带正则项)：
 $$J(f_t) = \sum_{i=1}^mL(y^i,  \hat{y}_i^{(t-1)} + f_t(\mathbf{x}^i)) + \Omega(f_t) + Const$$
-
-
-
-
-
-
-
-
-
