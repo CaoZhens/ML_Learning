@@ -25,7 +25,7 @@
 概率论的应用[4] - taylor公式与泊松分布  
 概率论的应用[5] - 本福特定律  
 
-[最优化算法[1] - 无约束优化问题的求解：梯度下降法，牛顿法](./notes/Optimization_Tutorial_1.md)  
+[最优化算法[1] - 求解无约束优化问题的方法：梯度下降法，牛顿法](./notes/Optimization_Tutorial_1.md)  
 
 ### PART II 模型 Model
 #### 线性回归 Linear Regression
@@ -62,7 +62,7 @@ sklearn-LR参数详解
 #### 集成方法(Ensemble Methods)
 Bootstrap与Bagging  
 [Boosting概述之一：从参数空间到函数空间](./notes/Boosting_Tutorial_0.md)  
-[Boosting概述之二](./notes/Boosting_Tutorial_1.md)   
+[Boosting概述之二：模型表达式](./notes/Boosting_Tutorial_1.md)   
 [XGBoost算法原理](./notes/Boosting_Tutorial_2.md)  
 Adaboost  
 对比GBDT与XGboost  
