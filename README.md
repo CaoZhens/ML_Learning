@@ -18,7 +18,6 @@
 [机器学习的数学基础[6] - 对协方差与皮尔逊相关系数的进一步讨论](./notes/Probability_Tutorial_1.md)  
 [机器学习的数学基础[7] - 信息论基础](./notes/1_Mathematical_Tutorial_5.md)  
 
-
 概率论的应用[1] - 生日悖论  
 [概率论的应用[2] - 组合数与信息熵](./notes/Probability_Tutorial_3.md)  
 概率论的应用[3] - taylor公式与Gini系数&信息熵  
@@ -30,9 +29,9 @@
 ### PART II 模型 Model
 #### 线性回归 Linear Regression
 [线性回归[1] - 模型建立](./notes/LinearRegression_Tutorial_1.md)  
-[线性回归[2] - 损失函数与模型求解：最小二乘法与梯度下降法](./notes/LinearRegression_Tutorial_2.md)  
+[线性回归[2] - 最小均方误差损失与模型求解(最小二乘法&梯度下降法)](./notes/LinearRegression_Tutorial_2.md)  
 [线性回归[3] - 最大似然估计与线性回归模型的先验假设](./notes/LinearRegression_Tutorial_3.md)  
-[线性回归[4] - 最大似然估计与最小二乘法的等价性](./notes/LinearRegression_Tutorial_4.md)  
+[线性回归[4] - 最大似然估计与最小均方误差损失的等价性](./notes/LinearRegression_Tutorial_4.md)  
 线性回归的扩展[1] - 对特征做扩展 - 多项式回归Polynomial Regression  
 线性回归的扩展[2] - 损失函数引入Normalization - Lasso/Ridge/ElasticNet  
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/6_LinearRegression/pic/LinearR_GD_FittingCurve.gif" alt="" data-canonical-src="" width="420" height="400" />
@@ -98,20 +97,12 @@ sklearn调参实战——XGBoost
 [机器学习中的损失函数](./notes/Summary_Tutorial_2.md)  
 
 ## 附录A Python基础
-
 ### 重要的第三方库
-
-#### Numpy Basics
-[list、ndarray、matrix的相互转换](./study/4_PythonFoundation/numpyBasics/convert_list_ndarray_matrix.py)  
-1.2 Key Functions  
-&emsp;&emsp;[1.2.1 shape](./study/4_PythonFoundation/numpyBasics/shape.py)  
-&emsp;&emsp;[1.2.2 slices](./study/4_PythonFoundation/numpyBasics/slices.py)
-
+#### [Numpy Basics](./study/4_PythonFoundation/numpyBasics/)
+#### [Pandas Basics](./study/4_PythonFoundation/pandasBasics/)
 #### [Scipy Basics](./study/4_PythonFoundation/scipyBasics/)
-
 #### [Matplotlib Basics](./study/4_PythonFoundation/matplotlibBasics/)
-
-#### [scikit-learn Basics](./study/5_SklearnFoundation/script/)
+#### [sklearn Basics](./study/5_SklearnFoundation/script/)
 
 ### 综合应用
 [1 - 文件读取](./study/4_PythonFoundation/loadData/)  
