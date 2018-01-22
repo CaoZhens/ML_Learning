@@ -18,6 +18,7 @@
 [机器学习的数学基础[6] - 对协方差与皮尔逊相关系数的进一步讨论](./notes/Probability_Tutorial_1.md)  
 [机器学习的数学基础[7] - 信息论基础1 - 熵／联合熵／条件熵／互信息／信息增益／信息增益比／Gini系数](./notes/1_Mathematical_Tutorial_5.md)  
 [机器学习的数学基础[8] - 信息论基础2 - 相对熵／KL散度／交叉熵](./notes/1_Mathematical_Tutorial_6.md)  
+[机器学习的数学基础[9] - 熵的本质](./notes/1_Mathematical_Tutorial_7.md)  
 
 概率论的应用[1] - 生日悖论  
 [概率论的应用[2] - 组合数与信息熵](./notes/Probability_Tutorial_3.md)  
