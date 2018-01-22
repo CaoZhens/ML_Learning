@@ -31,12 +31,15 @@ model = xgb.XGBClassifier(
     seed=0
 )
 model.fit(X_train, y_train)
-test = model.predict(X_test)
-print 'Accuracy: %.2f' % accuracy_score(y_test, test)
+y_pred = model.predict(X_test)
+y_prob = model.predict_proba(X_test)
+print y_pred
+print y_prob
+print 'Accuracy: %.2f' % accuracy_score(y_test, y_pred)
 
 # feat_importance
 feat_imp = pd.Series(model.booster().get_fscore()).sort_values(ascending=False)
 print feat_imp
 
-feat_imp.plot(kind='bar', title='Feature Importance')
-plt.show()
+# feat_imp.plot(kind='bar', title='Feature Importance')
+# plt.show()
