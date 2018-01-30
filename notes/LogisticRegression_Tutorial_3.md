@@ -27,3 +27,9 @@ $$LossFunc = -l(\theta) = \sum_{i=1}^m\left [ \frac12(y^i+1)log(1+e^{-\theta^T\m
 $$ LossFunc = \begin{cases} \sum_{i=1}^m log(1+e^{-\theta^T\mathbf{x}^i}), & \text {if $y^i = +1$} \\ \sum_{i=1}^m log(1+e^{\theta^T\mathbf{x}^i}), & \text{if $y^i=-1$} \end{cases} $$
 即：
 $$LossFunc = \sum_{i=1}^m log(1+e^{y^i(-\theta^T\mathbf{x}^i)})$$
+
+## 对标scikit-learn Documentation
+整理上式得到：
+$$\sum_{i=1}^m {\log(\exp(-y^i(\mathbf{x}^iw+b)+1)}$$
+与[scikit-learn Documentation](http://scikit-learn.org/stable/modules/linear_model.html#logistic-regression)中损失函数的形式一致。  
+<img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/7_LogisticRegression/pic/LR_costFunc.png" alt="" data-canonical-src="" />
