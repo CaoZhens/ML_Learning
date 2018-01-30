@@ -46,7 +46,7 @@
 [逻辑回归[2] - 模型求解](./notes/LogisticRegression_Tutorial_2.md)  
 [逻辑回归[3] - 从损失函数的角度看逻辑回归](./notes/LogisticRegression_Tutorial_3.md)  
 <img src="https://github.com/CaoZhens/ML_Learning/blob/master/study/7_LogisticRegression/pic/LogisticR_GD_FittingCurve.gif" alt="" data-canonical-src="" width="420" height="400" />  
-sklearn-LR参数详解  
+sklearn-LR参数详解  
 **SoftMax Regression - 多分类器**  
 逻辑回归与最大熵模型  
 
@@ -94,6 +94,8 @@ sklearn调参实战——LR
 [sklearn调参实战——GBM算法](./notes/ParaTuning_GBM.md)  
 sklearn调参实战——XGBoost  
 [hyperopt: Distributed Asynchronous Hyperparameter Optimization in Python](http://hyperopt.github.io/hyperopt/)  
+
+**Ensemble Learning 模型融合**  
 
 ### PART IV 个人总结
 [如何形式化描述机器学习问题？](./notes/Summary_Tutorial_1.md)  
