@@ -54,6 +54,11 @@ sklearn-LR参数详解
 [GLM[1] - 指数分布族](./notes/GLM_Tutorial_1.md)  
 [GLM[2] - 广义线性模型](./notes/GLM_Tutorial_2.md)
 
+#### 支持向量机 Supported Vector Machine
+[SVM[1] - 线性可分SVM的目标函数](./notes/SVM_Tutorial_1.md)  
+[SVM[2] - 利用拉格朗日乘子法求解线性可分SVM](./notes/SVM_Tutorial_2.md)  
+
+
 #### 决策树 Desicion Tree
 [决策树概述](./notes/DT_Tutorial_1.md)   
 [分类决策树的生成：ID3 / C4.5](./notes/DT_Tutorial_2.md)  
@@ -71,8 +76,8 @@ Adaboost
 sklearn-GBDT参数详解
 ... ...  
 
-### PART III 工程化应用
-
+### PART III Evaluation Metrics
+### PART IV  工程化应用
 #### 特征工程 Feature Engineering
 [特征工程[1] - 数据摘要 Summary of dataSet](./notes/FeatureEngineering_1.md) [例1]() [例2](./study/10_FeatureEngineering/files/PPD_summary_da.csv)  
 [特征工程[2] - 日期特征的处理](./notes/FeatureEngineering_2.md)  
