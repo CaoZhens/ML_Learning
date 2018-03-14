@@ -56,7 +56,7 @@ sklearn-LR参数详解
 
 #### 支持向量机 Supported Vector Machine
 [SVM[1] - 线性可分SVM的目标函数](./notes/SVM_Tutorial_1.md)  
-[SVM[2] - 利用拉格朗日乘子法求解线性可分SVM](./notes/SVM_Tutorial_2.md)  
+[SVM[2] - 线性可分SVM的原始问题和对偶问题](./notes/SVM_Tutorial_2.md)  
 
 
 #### 决策树 Desicion Tree
